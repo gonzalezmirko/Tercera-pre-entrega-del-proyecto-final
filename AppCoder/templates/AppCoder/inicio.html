@@ -1,7 +1,11 @@
 {% extends "AppCoder/padre.html" %}
 {% load static %}
+{% block titulo %}
+ Inicio
+{% endblock %}
 {% block ContenidoQueCambia %}
-    <h1>Este es el inicio</h1>
-    <p>Se hereda todo</p>
-    <h3>En el hijo, inicio.html ,casi </h3>
+    <h3>Buscar Camada:</h3>
+    <form action="/AppCoder/buscar/"    method="GET">
+        <input type="number" name="camada" id="camada">
+        <input type="submit" value="Buscar">
 {% endblock %}

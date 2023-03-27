@@ -2,12 +2,37 @@
 
 {% load static %}
 
+{% block titulo %}
+ Cursos
+{% endblock %}
+
+{%block Centro %}
+<!-- Inicio-->
+<header class="masthead">
+   <div class="container position-relative">
+       <div class="row justify-content-center">
+           <div class="col-xl-6">
+               <div class="text-center text-white">
+                   <!-- Page heading-->
+                   <h1 class="mb-5"> Cursos </h1>
+               </div>
+           </div>
+       </div>
+   </div>
+</header>
+{% endblock %}
+
 {% block ContenidoQueCambia %}
 
-
     <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
-    <h1>Cursos</h1>
-    <p>Acá va la info de los cursos</p>
+    <h3>Formulario - Agregar Curso :</h3>
 
+    <form action=""    method="POST"> {% csrf_token %}
 
+        <table>
+            {{ miFormulario.as_table }}
+        </table>
+
+        <input type = "submit" value="Enviar">
+     </form> 
 {% endblock %}
